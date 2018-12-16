@@ -50,7 +50,7 @@ public class Clock : Singleton<Clock> {
         {
             StartTimeSecond = StartTimeSecond + 1; ;
             Debug.Log("Start time second : " + StartTimeSecond);
-            if (StartTimeSecond % 10 == 0)
+            if (StartTimeSecond % 5 == 0)
             {
                 GameTimeHour++;
                 Debug.Log("Game time hour : " + GameTimeHour);
