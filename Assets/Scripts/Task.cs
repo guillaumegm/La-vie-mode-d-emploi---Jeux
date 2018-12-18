@@ -6,6 +6,7 @@ public class Task {
 
     private int hour;
     private string anEvent;
+    private Item itemToReach;
 
     public int Hour
     {
@@ -33,10 +34,24 @@ public class Task {
         }
     }
 
-    public Task(int hour, string anEvent)
+    public Item ItemToReach
+    {
+        get
+        {
+            return itemToReach;
+        }
+
+        set
+        {
+            itemToReach = value;
+        }
+    }
+
+    public Task(int hour, string anEvent, Item itemToReach)
     {
         Hour = hour;
         AnEvent = anEvent;
+        ItemToReach = itemToReach;
     }
 
     // Use this for initialization

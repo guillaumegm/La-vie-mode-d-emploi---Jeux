@@ -20,9 +20,9 @@ public class Agenda : MonoBehaviour {
         }
     }
 
-    public void addTask(int hour, String anEvent)
+    public void addTask(int hour, String anEvent, Item itemToReach)
     {
-        AgendaTasks.Add(new Task(hour, anEvent));
+        AgendaTasks.Add(new Task(hour, anEvent, itemToReach));
     }
     
 	// Use this for initialization

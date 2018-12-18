@@ -10,7 +10,8 @@ public class Character : MonoBehaviour {
     public int ageChar;
     public string descriptionChar;
     public float speed;
-    public GameObject testPorte;
+    public GameObject TempPorteAppart01;
+    public GameObject TempPorteAppart01;
     private Agenda agendaChar;
     private int agendaCount;
     private Task nextTask;
@@ -88,15 +89,15 @@ public class Character : MonoBehaviour {
         Debug.Log("c'est part pour le char !!");
         this.Subscribe();
         AgendaChar = gameObject.AddComponent<Agenda>();
-        FillAgendaChar();
+        TempFillAgendaChar();
         AgendaCount = 0;
         NextTask = AgendaChar.AgendaTasks[AgendaCount];
-        MoveTo(testPorte);
+        
     }
 
     // Update is called once per frame
     void Update() {
-
+        
     }
 
     void Subscribe()
@@ -128,10 +129,11 @@ public class Character : MonoBehaviour {
 
     Boolean InTheRoom(Room roomStart, Room roomEnd)
     {
-        if (roomStart == roomEnd)
+        if (roomStart != roomEnd)
         {
-            Debug.Log("Je suis dans la bonne pièce");
-            return true;
+            Debug.Log("Je ne suis pas dans la bonne pièce, je sorts");
+
+            return false;
         }
         else if (roomStart.roomsPlace == roomEnd.roomsPlace)
          {
@@ -148,14 +150,16 @@ public class Character : MonoBehaviour {
     }
 
 
-    void MoveTo(GameObject destination)
+    IEnumerator MoveTo(GameObject destination)
     {
         Debug.Log("Début Move to");
-        while (Math.Abs(this.transform.position.x - destination.transform.position.x) > 1)
-        {
             float step = speed * Time.deltaTime;
+        while (Math.Abs(this.transform.position.x - destination.transform.position.x) > 0.01)
+        {
             this.transform.position = Vector3.MoveTowards(this.transform.position, destination.transform.position, step);
+            yield return null;
         }
+
         Debug.Log("Fin Move to");
     }
 
@@ -173,6 +177,7 @@ public class Character : MonoBehaviour {
     void GoToWork()
     {
         Debug.Log("Je vais au travail");
+        StartCoroutine(MoveTo(testPorte));
     }
 
     void Eat()
@@ -180,12 +185,12 @@ public class Character : MonoBehaviour {
         Debug.Log("Je mange");
     }
 
-    void FillAgendaChar()
+    void TempFillAgendaChar()
     {
-        AgendaChar.addTask(2, "petit déj");
-        AgendaChar.addTask(3, "travail");
+        AgendaChar.addTask(1, "petit déj", );
+        AgendaChar.addTask(2, "travail");
+        AgendaChar.addTask(3, "apéro");
         AgendaChar.addTask(4, "diner");
-        AgendaChar.addTask(5, "télé");
-        AgendaChar.addTask(6, "dormir");
+        AgendaChar.addTask(5, "dormir");
     }
 }
