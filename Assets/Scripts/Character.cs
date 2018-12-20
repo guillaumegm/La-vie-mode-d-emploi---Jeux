@@ -10,8 +10,13 @@ public class Character : MonoBehaviour {
     public int ageChar;
     public string descriptionChar;
     public float speed;
-    public GameObject TempPorteAppart01;
-    public GameObject TempPorteAppart01;
+
+    public Item tempTargetBreakfast;
+    public Item tempTargetWork;
+    public Item tempTargetApero;
+    public Item tempTargetDiner;
+    public Item tempTargetSleep;
+
     private Agenda agendaChar;
     private int agendaCount;
     private Task nextTask;
@@ -111,7 +116,7 @@ public class Character : MonoBehaviour {
             CurrentTask = NextTask;
             if(CurrentTask.AnEvent == "travail")
             {
-                GoToWork();
+                GoTo(this.CurrentLocation, CurrentTask.ItemToReach.itemsRoom);
             }
 
             if ((AgendaCount+1) != AgendaChar.AgendaTasks.Count)
@@ -127,7 +132,7 @@ public class Character : MonoBehaviour {
     }
 
 
-    Boolean InTheRoom(Room roomStart, Room roomEnd)
+    Boolean GoTo(Room roomStart, Room roomEnd)
     {
         if (roomStart != roomEnd)
         {
@@ -143,14 +148,14 @@ public class Character : MonoBehaviour {
          else if (roomStart.roomsPlace.placesBuilding == roomEnd.roomsPlace.placesBuilding)
          {
             Debug.Log("Je suis dans le bon batiment");
-            MoveTo(roomStart.roomsPlace.exit);
+            //MoveTo(roomStart.roomsPlace.exit);
             return GoToThePlace(roomStart, roomEnd);
         }
         else return false;
     }
 
 
-    IEnumerator MoveTo(GameObject destination)
+    IEnumerator MoveTo(Item destination)
     {
         Debug.Log("Début Move to");
             float step = speed * Time.deltaTime;
@@ -177,7 +182,7 @@ public class Character : MonoBehaviour {
     void GoToWork()
     {
         Debug.Log("Je vais au travail");
-        StartCoroutine(MoveTo(testPorte));
+        StartCoroutine();
     }
 
     void Eat()
@@ -187,10 +192,10 @@ public class Character : MonoBehaviour {
 
     void TempFillAgendaChar()
     {
-        AgendaChar.addTask(1, "petit déj", );
-        AgendaChar.addTask(2, "travail");
-        AgendaChar.addTask(3, "apéro");
-        AgendaChar.addTask(4, "diner");
-        AgendaChar.addTask(5, "dormir");
+        AgendaChar.addTask(1, "petit déj", tempTargetBreakfast);
+        AgendaChar.addTask(2, "travail", tempTargetWork);
+        AgendaChar.addTask(3, "apéro", tempTargetApero);
+        AgendaChar.addTask(4, "diner", tempTargetDiner);
+        AgendaChar.addTask(5, "dormir", tempTargetSleep);
     }
 }
