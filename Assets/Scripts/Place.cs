@@ -5,7 +5,7 @@ using UnityEngine;
 public class Place : MonoBehaviour {
 
     public string namePlace;
-    public GameObject exit;
+    public Item exit;
     public Building placesBuilding;
     public List<Room> ListRoom;
 

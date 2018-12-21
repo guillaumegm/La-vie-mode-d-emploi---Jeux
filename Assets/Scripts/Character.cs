@@ -132,26 +132,25 @@ public class Character : MonoBehaviour {
     }
 
 
-    Boolean GoTo(Room roomStart, Room roomEnd)
+    void GoTo(Room roomStart, Room roomEnd)
     {
         if (roomStart != roomEnd)
         {
             Debug.Log("Je ne suis pas dans la bonne pièce, je sorts");
-
-            return false;
+        
+            if (roomStart.roomsPlace != roomEnd.roomsPlace)
+            {
+                 Debug.Log("Je ne suis pas dans le bon appart");
+                StartCoroutine(MoveTo(roomStart.roomsPlace.exit));
+                StartCoroutine(MoveTo(roomStart.roomsPlace.exit));
+            }
+            if (roomStart.roomsPlace.placesBuilding == roomEnd.roomsPlace.placesBuilding)
+            {
+                Debug.Log("Je suis dans le bon batiment");
+                //MoveTo(roomStart.roomsPlace.exit);
+                //GoToThePlace(roomStart, roomEnd);
+            }
         }
-        else if (roomStart.roomsPlace == roomEnd.roomsPlace)
-         {
-             Debug.Log("Je suis dans le bon appart");
-             return GoToTheRoom(roomStart, roomEnd);
-         }
-         else if (roomStart.roomsPlace.placesBuilding == roomEnd.roomsPlace.placesBuilding)
-         {
-            Debug.Log("Je suis dans le bon batiment");
-            //MoveTo(roomStart.roomsPlace.exit);
-            return GoToThePlace(roomStart, roomEnd);
-        }
-        else return false;
     }
 
 
@@ -166,28 +165,6 @@ public class Character : MonoBehaviour {
         }
 
         Debug.Log("Fin Move to");
-    }
-
-    Boolean GoToTheRoom(Room roomStart, Room roomEnd)
-    {
-        
-        return false;
-    }
-
-    Boolean GoToThePlace(Room roomStart, Room roomEnd)
-    {
-        return false;
-    }
-
-    void GoToWork()
-    {
-        Debug.Log("Je vais au travail");
-        StartCoroutine();
-    }
-
-    void Eat()
-    {
-        Debug.Log("Je mange");
     }
 
     void TempFillAgendaChar()
