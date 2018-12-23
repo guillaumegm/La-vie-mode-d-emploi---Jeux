@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Item : MonoBehaviour {
 
+    public string Name;
     public Room itemsRoom;
 
 	// Use this for initialization

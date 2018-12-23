@@ -113,6 +113,93 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &20393812
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 20393813}
+  - component: {fileID: 20393815}
+  - component: {fileID: 20393814}
+  m_Layer: 0
+  m_Name: Porte3_0_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &20393813
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20393812}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.11, y: -0.06, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1457284331}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &20393814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20393812}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: "Porte de l'appartement 0 du 3eme \xE9tage"
+  itemsRoom: {fileID: 1457284332}
+--- !u!212 &20393815
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 20393812}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 8a7edb23fbb215a4d8f0c05b8ec9331d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.44, y: 0.91}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &48294038
 GameObject:
   m_ObjectHideFlags: 0
@@ -124,7 +211,7 @@ GameObject:
   - component: {fileID: 48294041}
   - component: {fileID: 48294040}
   m_Layer: 0
-  m_Name: Porte1_1_0 (1)
+  m_Name: Porte2_1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +224,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 48294038}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.96000004, y: -1.4100001, z: 0}
+  m_LocalPosition: {x: 0.3, y: -0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1194230418}
@@ -154,6 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: "Porte de l'appartement 1 du 2e \xE9tage"
   itemsRoom: {fileID: 1639515074}
 --- !u!212 &48294041
 SpriteRenderer:
@@ -209,7 +297,7 @@ GameObject:
   - component: {fileID: 115882545}
   - component: {fileID: 115882546}
   m_Layer: 0
-  m_Name: Appartement4
+  m_Name: Appartement3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -240,11 +328,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e500b3de1a559409d8d327b0640526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namePlace: 
-  exit: {fileID: 0}
-  placesBuilding: {fileID: 0}
-  ListRoom: []
-  floor: {fileID: 0}
+  namePlace: "Appartement 0 du 3\xE8me \xE9tage"
+  exit: {fileID: 20393814}
+  placesBuilding: {fileID: 2137375554}
+  ListRoom:
+  - {fileID: 1457284332}
+  floor: {fileID: 1575300211}
 --- !u!1 &177409526
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,11 +456,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e500b3de1a559409d8d327b0640526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namePlace: 
-  exit: {fileID: 0}
-  placesBuilding: {fileID: 0}
-  ListRoom: []
-  floor: {fileID: 0}
+  namePlace: "Cage d'ascenceur du 2\xE8me \xE9tage"
+  exit: {fileID: 1079280575}
+  placesBuilding: {fileID: 2137375554}
+  ListRoom:
+  - {fileID: 679785851}
+  floor: {fileID: 813559158}
 --- !u!4 &212726992
 Transform:
   m_ObjectHideFlags: 0
@@ -525,7 +615,7 @@ GameObject:
   - component: {fileID: 463682852}
   - component: {fileID: 463682854}
   m_Layer: 0
-  m_Name: ElevatorShaft3_1
+  m_Name: ElevatorShaft3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -600,8 +690,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7695dd77adc8bf84eb91b9aaa73d33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: 
-  roomsPlace: {fileID: 0}
+  roomName: "Cage d'ascenceur du 3\xE8me \xE9tage"
+  roomsPlace: {fileID: 675277707}
 --- !u!1 &521985172
 GameObject:
   m_ObjectHideFlags: 0
@@ -658,7 +748,7 @@ GameObject:
   - component: {fileID: 523310325}
   - component: {fileID: 523310327}
   m_Layer: 0
-  m_Name: ElevatorDoor3
+  m_Name: ElevatorDoor3_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -732,7 +822,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRoom: {fileID: 0}
+  Name: "Porte de l'ascenceur du 3\xE8me \xE9tage"
+  itemsRoom: {fileID: 463682854}
 --- !u!1 &598690715
 GameObject:
   m_ObjectHideFlags: 0
@@ -743,7 +834,7 @@ GameObject:
   - component: {fileID: 598690716}
   - component: {fileID: 598690717}
   m_Layer: 0
-  m_Name: Appartement6
+  m_Name: Appartement3_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -774,11 +865,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e500b3de1a559409d8d327b0640526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namePlace: 
-  exit: {fileID: 0}
-  placesBuilding: {fileID: 0}
-  ListRoom: []
-  floor: {fileID: 0}
+  namePlace: "Appartement 1 du 3\xE8me \xE9tage"
+  exit: {fileID: 2061617960}
+  placesBuilding: {fileID: 2137375554}
+  ListRoom:
+  - {fileID: 598795178}
+  floor: {fileID: 1575300211}
 --- !u!1 &598795175
 GameObject:
   m_ObjectHideFlags: 0
@@ -790,7 +882,7 @@ GameObject:
   - component: {fileID: 598795176}
   - component: {fileID: 598795178}
   m_Layer: 0
-  m_Name: Room6_1
+  m_Name: Room3_1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -849,7 +941,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 5.082144, y: 3.6483693, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2061617959}
   m_Father: {fileID: 598690716}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -864,8 +957,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7695dd77adc8bf84eb91b9aaa73d33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: 
-  roomsPlace: {fileID: 0}
+  roomName: "Salle 0 de l'appartement 1 du 3\xE8me \xE9tage"
+  roomsPlace: {fileID: 598690717}
 --- !u!1 &633451806
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,7 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e500b3de1a559409d8d327b0640526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namePlace: 
+  namePlace: "Appartement 0 de l'\xE9tage 1"
   exit: {fileID: 1431117862}
   placesBuilding: {fileID: 2137375554}
   ListRoom:
@@ -940,11 +1033,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e500b3de1a559409d8d327b0640526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namePlace: 
-  exit: {fileID: 0}
-  placesBuilding: {fileID: 0}
-  ListRoom: []
-  floor: {fileID: 0}
+  namePlace: "Cage d'ascenceur du 3\xE8me \xE9tage"
+  exit: {fileID: 523310327}
+  placesBuilding: {fileID: 2137375554}
+  ListRoom:
+  - {fileID: 463682854}
+  floor: {fileID: 1575300211}
 --- !u!4 &675277708
 Transform:
   m_ObjectHideFlags: 0
@@ -970,7 +1064,7 @@ GameObject:
   - component: {fileID: 679785849}
   - component: {fileID: 679785851}
   m_Layer: 0
-  m_Name: ElevatorShaft2_1
+  m_Name: ElevatorShaft2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1045,8 +1139,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7695dd77adc8bf84eb91b9aaa73d33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: 
-  roomsPlace: {fileID: 0}
+  roomName: "Cage d'ascenceur du 2\xE8me \xE9tage"
+  roomsPlace: {fileID: 212726991}
 --- !u!1 &710948773
 GameObject:
   m_ObjectHideFlags: 0
@@ -1132,7 +1226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRoom: {fileID: 0}
+  Name: "Lit du 2e \xE9tage"
+  itemsRoom: {fileID: 1016815053}
 --- !u!1 &715208054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1224,13 +1319,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   namePlace: Premier appartement
-  exit: {fileID: 0}
+  exit: {fileID: 1520448435}
   placesBuilding: {fileID: 2137375554}
   ListRoom:
   - {fileID: 1451591437}
   - {fileID: 2035196246}
   - {fileID: 1016815053}
-  floor: {fileID: 0}
+  floor: {fileID: 813559158}
 --- !u!1 &813559156
 GameObject:
   m_ObjectHideFlags: 0
@@ -1318,7 +1413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7695dd77adc8bf84eb91b9aaa73d33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: "Entr\xE9e"
+  roomName: "Chambre \xE0 couch\xE9 de l'appartement 0 du 2\xE8me \xE9tage"
   roomsPlace: {fileID: 785973401}
 --- !u!212 &1016815054
 SpriteRenderer:
@@ -1375,7 +1470,7 @@ GameObject:
   - component: {fileID: 1079280573}
   - component: {fileID: 1079280575}
   m_Layer: 0
-  m_Name: ElevatorDoor2
+  m_Name: ElevatorDoor2_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1449,7 +1544,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRoom: {fileID: 0}
+  Name: "Porte de l'ascenceur du 2\xE8me \xE9tage"
+  itemsRoom: {fileID: 679785851}
 --- !u!1 &1193132443
 GameObject:
   m_ObjectHideFlags: 0
@@ -1549,7 +1645,7 @@ GameObject:
   - component: {fileID: 1194230417}
   - component: {fileID: 1194230419}
   m_Layer: 0
-  m_Name: Room2_1
+  m_Name: Room2_1_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1624,8 +1720,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7695dd77adc8bf84eb91b9aaa73d33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: 
-  roomsPlace: {fileID: 0}
+  roomName: "Salle 0 de l'appartement 1 du 2e \xE9tage"
+  roomsPlace: {fileID: 2095829424}
 --- !u!1 &1327976054
 GameObject:
   m_ObjectHideFlags: 0
@@ -1667,6 +1763,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Porte de l'appartement 0 du RDC
   itemsRoom: {fileID: 1193132446}
 --- !u!212 &1327976057
 SpriteRenderer:
@@ -1797,6 +1894,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: Porte de l'ascenceur du RDC
   itemsRoom: {fileID: 1542262563}
 --- !u!1 &1360208041
 GameObject:
@@ -1927,6 +2025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: "Porte de l'appartement 0 du 1er \xE9tage"
   itemsRoom: {fileID: 2137286323}
 --- !u!1 &1451591434
 GameObject:
@@ -2014,7 +2113,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7695dd77adc8bf84eb91b9aaa73d33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: Chambre
+  roomName: " de l'appartement 0 du 2e \xE9tage"
   roomsPlace: {fileID: 785973401}
 --- !u!1 &1457284329
 GameObject:
@@ -2027,7 +2126,7 @@ GameObject:
   - component: {fileID: 1457284330}
   - component: {fileID: 1457284332}
   m_Layer: 0
-  m_Name: Room4_1
+  m_Name: Room3_0_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2086,7 +2185,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 10.917649, y: 1.1358541, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 20393813}
   m_Father: {fileID: 115882545}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2101,8 +2201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7695dd77adc8bf84eb91b9aaa73d33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: 
-  roomsPlace: {fileID: 0}
+  roomName: "Salle 0 de l'appartement 0 du 3eme \xE9tage"
+  roomsPlace: {fileID: 115882546}
 --- !u!1 &1520448432
 GameObject:
   m_ObjectHideFlags: 0
@@ -2188,7 +2288,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRoom: {fileID: 0}
+  Name: "Porte de l'appartement 0 de l'\xE9tage 2"
+  itemsRoom: {fileID: 1451591437}
 --- !u!1 &1542262560
 GameObject:
   m_ObjectHideFlags: 0
@@ -2362,7 +2463,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  itemsRoom: {fileID: 0}
+  Name: "Table de la salle 1 de l'appartement 1 du 2eme \xE9tage"
+  itemsRoom: {fileID: 2035196246}
 --- !u!1 &1575300209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2523,7 +2625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e500b3de1a559409d8d327b0640526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namePlace: 
+  namePlace: "Cage d'escalier du premier \xE9tage"
   exit: {fileID: 1811232724}
   placesBuilding: {fileID: 2137375554}
   ListRoom:
@@ -2628,6 +2730,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: "Porte de l'ascenceur du 1er \xE9tage"
   itemsRoom: {fileID: 1918913308}
 --- !u!1 &1828660114
 GameObject:
@@ -2670,6 +2773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: "Porte de l'appartement 1 du 1er \xE9tage"
   itemsRoom: {fileID: 1639515074}
 --- !u!212 &1828660117
 SpriteRenderer:
@@ -2801,8 +2905,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7695dd77adc8bf84eb91b9aaa73d33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: 
-  roomsPlace: {fileID: 0}
+  roomName: "Cage d'escalier du premier \xE9tage"
+  roomsPlace: {fileID: 1762112415}
 --- !u!1 &1965848163
 GameObject:
   m_ObjectHideFlags: 0
@@ -2931,6 +3035,93 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomName: "Salle \xE0 manger"
   roomsPlace: {fileID: 785973401}
+--- !u!1 &2061617958
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 2061617959}
+  - component: {fileID: 2061617961}
+  - component: {fileID: 2061617960}
+  m_Layer: 0
+  m_Name: Porte3_1_0
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2061617959
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2061617958}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.11, y: -0.04151535, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 598795177}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2061617960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2061617958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff54b7a3ac8d4f240b19b43f9795c958, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: "Porte de l'appartement 1 du 3eme \xE9tage"
+  itemsRoom: {fileID: 598795178}
+--- !u!212 &2061617961
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2061617958}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 1
+  m_Sprite: {fileID: 21300000, guid: 8a7edb23fbb215a4d8f0c05b8ec9331d, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 0.44, y: 0.91}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
 --- !u!1 &2095829422
 GameObject:
   m_ObjectHideFlags: 0
@@ -2941,7 +3132,7 @@ GameObject:
   - component: {fileID: 2095829423}
   - component: {fileID: 2095829424}
   m_Layer: 0
-  m_Name: Appartement2
+  m_Name: Appartement2_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2972,11 +3163,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a8e500b3de1a559409d8d327b0640526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namePlace: 
-  exit: {fileID: 0}
-  placesBuilding: {fileID: 0}
-  ListRoom: []
-  floor: {fileID: 0}
+  namePlace: "Appartement 1 du 2e \xE9tage"
+  exit: {fileID: 48294040}
+  placesBuilding: {fileID: 2137375554}
+  ListRoom:
+  - {fileID: 1194230419}
+  floor: {fileID: 813559158}
 --- !u!1 &2096704168
 GameObject:
   m_ObjectHideFlags: 0
@@ -3110,7 +3302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7695dd77adc8bf84eb91b9aaa73d33b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomName: Salle 0 de l'appartement 1
+  roomName: Salle 0 de l'appartement 0
   roomsPlace: {fileID: 633451808}
 --- !u!1 &2137375552
 GameObject:
