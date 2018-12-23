@@ -5,13 +5,13 @@ using UnityEngine;
 public class Room : MonoBehaviour {
 
     public string roomName;
-    public int roomX;
-    public int roomY;
+    //public int roomX;
+    //public int roomY;
     public Place roomsPlace;
-    public bool toTop;
+    /*public bool toTop;
     public bool ToBottom;
     public bool ToLeft;
-    public bool ToRight;
+    public bool ToRight;*/
 
     public string RoomName
     {

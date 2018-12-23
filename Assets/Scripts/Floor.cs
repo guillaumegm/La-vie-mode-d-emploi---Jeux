@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Building : MonoBehaviour {
-
-    public List<Floor> listFloor;
+public class Floor : MonoBehaviour {
+    public int floorNumber;
+    public Place elevatorShaft;
 
 	// Use this for initialization
 	void Start () {

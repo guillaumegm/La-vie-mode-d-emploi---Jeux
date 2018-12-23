@@ -8,6 +8,7 @@ public class Place : MonoBehaviour {
     public Item exit;
     public Building placesBuilding;
     public List<Room> ListRoom;
+    public Floor floor;
 
     // Use this for initialization
     void Start () {

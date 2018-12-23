@@ -21,7 +21,7 @@ public class Character : MonoBehaviour {
     private int agendaCount;
     private Task nextTask;
     private Task currentTask;
-    private Room currentLocation;
+    private Room currentRoom;
 
     public Task NextTask
     {
@@ -62,19 +62,6 @@ public class Character : MonoBehaviour {
         }
     }
 
-    public Room CurrentLocation
-    {
-        get
-        {
-            return currentLocation;
-        }
-
-        set
-        {
-            currentLocation = value;
-        }
-    }
-
     public int AgendaCount
     {
         get
@@ -85,6 +72,19 @@ public class Character : MonoBehaviour {
         set
         {
             agendaCount = value;
+        }
+    }
+
+    public Room CurrentRoom
+    {
+        get
+        {
+            return currentRoom;
+        }
+
+        set
+        {
+            currentRoom = value;
         }
     }
 
@@ -116,7 +116,7 @@ public class Character : MonoBehaviour {
             CurrentTask = NextTask;
             if(CurrentTask.AnEvent == "travail")
             {
-                GoTo(this.CurrentLocation, CurrentTask.ItemToReach.itemsRoom);
+                GoTo(this.CurrentRoom, CurrentTask.ItemToReach.itemsRoom);
             }
 
             if ((AgendaCount+1) != AgendaChar.AgendaTasks.Count)
@@ -143,6 +143,11 @@ public class Character : MonoBehaviour {
                  Debug.Log("Je ne suis pas dans le bon appart");
                 StartCoroutine(MoveTo(roomStart.roomsPlace.exit));
                 StartCoroutine(MoveTo(roomStart.roomsPlace.exit));
+                if (roomStart.roomsPlace.floor != roomEnd.roomsPlace.floor)
+                {
+                    Debug.Log("Je ne suis pas au bon étage");
+                    StartCoroutine(MoveTo(roomStart.roomsPlace.floor.elevatorShaft.exit));
+                }
             }
             if (roomStart.roomsPlace.placesBuilding == roomEnd.roomsPlace.placesBuilding)
             {
