@@ -6,12 +6,10 @@ public class Building : MonoBehaviour {
 
     public List<Floor> listFloor;
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}

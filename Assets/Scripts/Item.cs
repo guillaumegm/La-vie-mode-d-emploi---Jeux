@@ -7,12 +7,10 @@ public class Item : MonoBehaviour {
     public string Name;
     public Room itemsRoom;
 
-	// Use this for initialization
 	void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}

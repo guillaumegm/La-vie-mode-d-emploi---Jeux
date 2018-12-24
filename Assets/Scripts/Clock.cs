@@ -38,13 +38,11 @@ public class Clock : Singleton<Clock> {
         }
     }
 
-    // Use this for initialization
     void Start () {
         StartTimeSecond = 0;
         gameTimeHour = 0;
     }
 	
-	// Update is called once per frame
 	void Update () {
         if (Time.time - StartTimeSecond >= 1f)
         {

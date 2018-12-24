@@ -21,7 +21,7 @@ public class Character : MonoBehaviour {
     private int agendaCount;
     private Task nextTask;
     private Task currentTask;
-    private Room currentRoom;
+    public Room currentRoom;
 
     public Task NextTask
     {
@@ -75,21 +75,6 @@ public class Character : MonoBehaviour {
         }
     }
 
-    public Room CurrentRoom
-    {
-        get
-        {
-            return currentRoom;
-        }
-
-        set
-        {
-            currentRoom = value;
-        }
-    }
-
-
-    // Use this for initialization
     void Start() {
         Debug.Log("c'est part pour le char !!");
         this.Subscribe();
@@ -100,7 +85,6 @@ public class Character : MonoBehaviour {
         
     }
 
-    // Update is called once per frame
     void Update() {
         
     }
@@ -110,16 +94,18 @@ public class Character : MonoBehaviour {
         Singleton<Clock>.Instance.OneHour += new Clock.ClockHandler(NewHour);
     }
 
-    void NewHour(Clock c, EventArgs e){
-        if(NextTask.Hour == Singleton<Clock>.Instance.GameTimeHour)
+    void NewHour(Clock c, EventArgs e)
+    {
+        if (NextTask.Hour == Singleton<Clock>.Instance.GameTimeHour)
         {
             CurrentTask = NextTask;
-            if(CurrentTask.AnEvent == "travail")
+            if (CurrentTask.AnEvent == "travail")
             {
-                GoTo(this.CurrentRoom, CurrentTask.ItemToReach.itemsRoom);
+                Debug.Log("[Character.NewHour]On va lancer le GoTo pour le travail ");
+                StartCoroutine(GoTo(this.currentRoom, CurrentTask.ItemToReach.itemsRoom, CurrentTask.ItemToReach));
             }
 
-            if ((AgendaCount+1) != AgendaChar.AgendaTasks.Count)
+            if ((AgendaCount + 1) != AgendaChar.AgendaTasks.Count)
             {
                 AgendaCount++;
             }
@@ -131,31 +117,28 @@ public class Character : MonoBehaviour {
         }
     }
 
-
-    void GoTo(Room roomStart, Room roomEnd)
+    IEnumerator GoTo(Room roomStart, Room roomEnd, Item itemToReach)
     {
         if (roomStart != roomEnd)
         {
-            Debug.Log("Je ne suis pas dans la bonne pièce, je sorts");
-        
+            Debug.Log("[GoTo] Je ne suis pas dans la bonne pièce");
             if (roomStart.roomsPlace != roomEnd.roomsPlace)
             {
-                 Debug.Log("Je ne suis pas dans le bon appart");
-                StartCoroutine(MoveTo(roomStart.roomsPlace.exit));
-                StartCoroutine(MoveTo(roomStart.roomsPlace.exit));
+                Debug.Log("[GoTo] Je ne suis pas dans le bon appart");
+                yield return MoveTo(roomStart.roomsPlace.exit);
+
                 if (roomStart.roomsPlace.floor != roomEnd.roomsPlace.floor)
                 {
-                    Debug.Log("Je ne suis pas au bon étage");
-                    StartCoroutine(MoveTo(roomStart.roomsPlace.floor.elevatorShaft.exit));
+                    Debug.Log("[GoTo] Je ne suis pas au bon étage");
+                    yield return MoveTo(roomStart.roomsPlace.floor.elevatorShaft.exit);
+                    yield return MoveToElevator(roomEnd.roomsPlace.floor.elevatorShaft.exit);
                 }
+                Debug.Log("[GoTo] Je me dirige vers l'appartement");
+                yield return MoveTo(roomEnd.roomsPlace.exit);
             }
-            if (roomStart.roomsPlace.placesBuilding == roomEnd.roomsPlace.placesBuilding)
-            {
-                Debug.Log("Je suis dans le bon batiment");
-                //MoveTo(roomStart.roomsPlace.exit);
-                //GoToThePlace(roomStart, roomEnd);
-            }
+            yield return MoveTo(itemToReach);
         }
+        
     }
 
 
@@ -170,6 +153,19 @@ public class Character : MonoBehaviour {
         }
 
         Debug.Log("Fin Move to");
+    }
+
+    IEnumerator MoveToElevator(Item destination)
+    {
+        Debug.Log("Début Move to Elevator");
+        float step = speed * Time.deltaTime;
+        while (Math.Abs(this.transform.position.y - destination.transform.position.y) > 0.01)
+        {
+            this.transform.position = Vector3.MoveTowards(this.transform.position, destination.transform.position, step);
+            yield return null;
+        }
+
+        Debug.Log("Fin Move to Elevator");
     }
 
     void TempFillAgendaChar()

@@ -5,13 +5,7 @@ using UnityEngine;
 public class Room : MonoBehaviour {
 
     public string roomName;
-    //public int roomX;
-    //public int roomY;
     public Place roomsPlace;
-    /*public bool toTop;
-    public bool ToBottom;
-    public bool ToLeft;
-    public bool ToRight;*/
 
     public string RoomName
     {
@@ -26,12 +20,10 @@ public class Room : MonoBehaviour {
         }
     }
 
-    // Use this for initialization
     void Start () {
        
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}

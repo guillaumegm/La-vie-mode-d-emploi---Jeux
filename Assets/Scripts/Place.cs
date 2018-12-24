@@ -10,12 +10,10 @@ public class Place : MonoBehaviour {
     public List<Room> ListRoom;
     public Floor floor;
 
-    // Use this for initialization
     void Start () {
 		
 	}
 	
-	// Update is called once per frame
 	void Update () {
 		
 	}
