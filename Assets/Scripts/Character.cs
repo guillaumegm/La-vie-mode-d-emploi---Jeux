@@ -131,7 +131,7 @@ public class Character : MonoBehaviour {
                 {
                     Debug.Log("[GoTo] Je ne suis pas au bon étage");
                     yield return MoveTo(roomStart.roomsPlace.floor.elevatorShaft.exit);
-                    yield return MoveToElevator(roomEnd.roomsPlace.floor.elevatorShaft.exit);
+                    yield return MoveToByElevator(roomEnd.roomsPlace.floor.elevatorShaft.exit);
                 }
                 Debug.Log("[GoTo] Je me dirige vers l'appartement");
                 yield return MoveTo(roomEnd.roomsPlace.exit);
@@ -141,7 +141,7 @@ public class Character : MonoBehaviour {
         
     }
 
-
+    //Control horizontal moves
     IEnumerator MoveTo(Item destination)
     {
         Debug.Log("Début Move to");
@@ -155,7 +155,9 @@ public class Character : MonoBehaviour {
         Debug.Log("Fin Move to");
     }
 
-    IEnumerator MoveToElevator(Item destination)
+    //Control vertical moves
+    //Probably to merge with MoveTo as soon as possible
+    IEnumerator MoveToByElevator(Item destination)
     {
         Debug.Log("Début Move to Elevator");
         float step = speed * Time.deltaTime;
